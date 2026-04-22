@@ -2,13 +2,11 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-// Plugin register karna mat bhulna
 gsap.registerPlugin(ScrollToPlugin);
 
 export default function Navbar() {
   const navRef = useRef(null);
 
-  // Navigation Links array
   const navLinks = [
     { name: "Home", href: "#hero" },
     { name: "Services", href: "#services" },
@@ -18,14 +16,7 @@ export default function Navbar() {
     { name: "About", href: "#about" },
   ];
 
-  const handleScroll = (e, target) => {
-    e.preventDefault();
-    gsap.to(window, {
-      duration: 1.2,
-      scrollTo: { y: target, offsetY: 70 },
-      ease: "power4.inOut",
-    });
-  };
+
 
   return (
     <nav
@@ -36,7 +27,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div
             className="flex items-center gap-2 cursor-pointer"
-            onClick={(e) => handleScroll(e, "#hero")}
+         
           >
             <div className="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center text-white">
               C
@@ -49,7 +40,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                onClick={(e) => handleScroll(e, link.href)}
+               
                 className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
               >
                 {link.name}
@@ -59,7 +50,7 @@ export default function Navbar() {
 
           <div className="hidden md:block">
             <button
-              onClick={(e) => handleScroll(e, "#contact")}
+              
               className="bg-slate-900 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-slate-800 transition-all"
             >
               Hire Us
