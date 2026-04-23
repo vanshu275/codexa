@@ -1,37 +1,5 @@
 @import "tailwindcss";
 
-/*below this msg is just a theme so don't touch it */
-/* Futuristic Midnight Theme */
-
-:root {
-  /* Background Colors */
-  --bg-primary: #030712;
-  --bg-secondary: #0b1020;
-  --bg-tertiary: #111827;
-
-  /* Futuristic Accent Colors */
-  --accent-primary: #00e5ff;
-  --accent-secondary: #7c3aed;
-  --accent-soft: #38bdf8;
-  --accent-glow: rgba(0, 229, 255, 0.18);
-
-  /* Text Colors */
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-
-  /* Border + Effects */
-  --border-color: rgba(255, 255, 255, 0.08);
-  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
-  --shadow-glow: 0 0 40px rgba(0, 229, 255, 0.12);
-  --radius: 18px;
-  --transition: all 0.3s ease;
-
-  /* Typography */
-  --font-heading: 'Sora', sans-serif;
-  --font-body: 'Inter', sans-serif;
-}
-
 /* Reset */
 * {
   margin: 0;
@@ -45,8 +13,16 @@ html {
 
 body {
   background:
-    radial-gradient(circle at top right, rgba(124, 58, 237, 0.08), transparent 40%),
-    radial-gradient(circle at top left, rgba(0, 229, 255, 0.08), transparent 35%),
+    radial-gradient(
+      circle at top right,
+      rgba(124, 58, 237, 0.08),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at top left,
+      rgba(0, 229, 255, 0.08),
+      transparent 35%
+    ),
     linear-gradient(180deg, var(--bg-primary), var(--bg-secondary));
   color: var(--text-primary);
   font-family: var(--font-body);
@@ -101,7 +77,11 @@ button {
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  background: linear-gradient(
+    90deg,
+    var(--accent-primary),
+    var(--accent-secondary)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -129,7 +109,11 @@ button {
 
 /* Buttons */
 .btn-primary {
-  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  background: linear-gradient(
+    90deg,
+    var(--accent-primary),
+    var(--accent-secondary)
+  );
   color: var(--bg-primary);
   padding: 12px 28px;
   border-radius: 100px;

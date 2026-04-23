@@ -44,7 +44,7 @@ export default function Services() {
   return (
     <section 
     id="services"
-    ref={containerRef} className="py-20 px-4 bg-white overflow-hidden">
+    ref={containerRef} className="py-20 px-4 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">

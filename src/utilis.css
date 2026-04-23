@@ -1,0 +1,32 @@
+
+/*below this msg is just a theme so don't touch it */
+/* Futuristic Midnight Theme */
+
+:root {
+  /* Background Colors */
+  --bg-primary: #000105;
+  --bg-secondary: #000106;
+  --bg-tertiary: #111827;
+
+  /* Futuristic Accent Colors */
+  --accent-primary: #00e5ff;
+  --accent-secondary: #7c3aed;
+  --accent-soft: #38bdf8;
+  --accent-glow: rgba(0, 229, 255, 0.18);
+
+  /* Text Colors */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  /* Border + Effects */
+  --border-color: rgba(255, 255, 255, 0.08);
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 40px rgba(0, 229, 255, 0.12);
+  --radius: 18px;
+  --transition: all 0.3s ease;
+
+  /* Typography */
+  --font-heading: 'Sora', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
