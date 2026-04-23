@@ -33,7 +33,7 @@ export default function Contact() {
   };
 
   return (
-    <section ref={containerRef} className="py-20 px-4 bg-white">
+    <section id='contact' ref={containerRef} className="py-20 px-4 bg-white">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4 text-balance">

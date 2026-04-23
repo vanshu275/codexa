@@ -35,7 +35,7 @@ export default function WhyUs() {
 
 
   return (
-    <section ref={containerRef} className="py-20 px-4 bg-slate-900 text-white">
+    <section id='why-us' ref={containerRef} className="py-20 px-4 bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-balance">

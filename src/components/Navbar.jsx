@@ -11,13 +11,11 @@ export default function Navbar() {
     { name: "About", href: "#about" },
   ];
 
-
-
   return (
     <nav ref={navRef} className="navbar">
       <div className="container">
         <div className="nav-wrapper">
-          <div className="logo">
+          <div className="logo select-none">
             <span>C</span>odexa
           </div>
 
@@ -29,8 +27,10 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <div className="nav-actions">
-            <button className="btn-outline">Let's Talk</button>
+          <div>
+            <a href="#contact">
+              <button className="btn-outline">Let's Talk</button>
+            </a>
           </div>
         </div>
       </div>

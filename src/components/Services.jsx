@@ -1,6 +1,6 @@
-import { useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,34 +10,41 @@ export default function Services() {
 
   const services = [
     {
-      title: 'Web Design',
-      description: 'Beautiful, responsive websites tailored to your brand identity and user needs.',
-      icon: '🎨',
+      title: "Web Design",
+      description:
+        "Beautiful, responsive websites tailored to your brand identity and user needs.",
+      icon: "🎨",
     },
     {
-      title: 'Web Development',
-      description: 'Robust, scalable web applications built with modern technologies and best practices.',
-      icon: '⚙️',
+      title: "Web Development",
+      description:
+        "Robust, scalable web applications built with modern technologies and best practices.",
+      icon: "⚙️",
     },
     {
-      title: 'Brand Strategy',
-      description: 'Strategic branding solutions that help your business stand out and connect with audiences.',
-      icon: '🎯',
+      title: "Brand Strategy",
+      description:
+        "Strategic branding solutions that help your business stand out and connect with audiences.",
+      icon: "🎯",
     },
     {
-      title: 'SEO Optimization',
-      description: 'Comprehensive SEO strategies to improve visibility and drive organic traffic.',
-      icon: '🔍',
+      title: "SEO Optimization",
+      description:
+        "Comprehensive SEO strategies to improve visibility and drive organic traffic.",
+      icon: "🔍",
     },
     {
-      title: 'Digital Marketing',
-      description: 'Data-driven marketing campaigns that reach your target audience effectively.',
-      icon: '📊',
+      title: "Digital Marketing",
+      description:
+        "Data-driven marketing campaigns that reach your target audience effectively.",
+      icon: "📊",
     },
   ];
 
- return (
-    <section ref={containerRef} className="py-20 px-4 bg-white overflow-hidden">
+  return (
+    <section 
+    id="services"
+    ref={containerRef} className="py-20 px-4 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
