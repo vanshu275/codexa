@@ -1,8 +1,4 @@
 import { useRef } from "react";
-import gsap from "gsap";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-
-gsap.registerPlugin(ScrollToPlugin);
 
 export default function Navbar() {
   const navRef = useRef(null);
@@ -18,42 +14,23 @@ export default function Navbar() {
 
 
   return (
-    <nav
-      ref={navRef}
-      className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div
-            className="flex items-center gap-2 cursor-pointer"
-         
-          >
-            <div className="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center text-white">
-              C
-            </div>
-            <span className="text-xl font-bold text-slate-900">Codexa</span>
+    <nav ref={navRef} className="navbar">
+      <div className="container">
+        <div className="nav-wrapper">
+          <div className="logo">
+            <span>C</span>odexa
           </div>
 
-          <div className="hidden md:flex items-center gap-8">
+          <ul className="nav-links">
             {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-               
-                className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
-              >
-                {link.name}
-              </a>
+              <li key={link.name}>
+                <a href={link.href}>{link.name}</a>
+              </li>
             ))}
-          </div>
+          </ul>
 
-          <div className="hidden md:block">
-            <button
-              
-              className="bg-slate-900 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-slate-800 transition-all"
-            >
-              Hire Us
-            </button>
+          <div className="nav-actions">
+            <button className="btn-outline">Let's Talk</button>
           </div>
         </div>
       </div>
