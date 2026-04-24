@@ -11,13 +11,13 @@ import heroImage from "./assets/Group 16.svg";
 
 export default function App() {
   return (
-    <main className="min-h-screen relative overflow-x-hidden">
+    <main className="relative w-screen">
       {/* Global Background Decoration */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl pointer-events-none opacity-70 z-0">
         <img src={heroImage} alt="" className="w-full h-auto" />
       </div>
 
-      <div className="relative z-10">
+      <div className="relative w-screen z-10">
         <Navbar />
         <Hero />
         <Services />
