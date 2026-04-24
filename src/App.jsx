@@ -11,13 +11,7 @@ import Projects from "./components/Projects";
 
 export default function App() {
   return (
-    <main className="min-h-screen relative overflow-x-hidden bg-[#050505]">
-      {/* Global Background Decoration */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl pointer-events-none opacity-70 z-0">
-        {/* Agar heroImage nahi hai toh is <img> tag ko temporary comment kar dena */}
-        {/* <img src={heroImage} alt="" className="w-full h-auto" /> */}
-      </div>
-
+    <main>
       <div className="relative z-10">
         <Navbar />
         <Hero />
@@ -28,6 +22,6 @@ export default function App() {
         <Contact />
         <Footer />
       </div>
-    </main> // Yahan pehle <main/> tha jo galat tha
+    </main> 
   );
 }

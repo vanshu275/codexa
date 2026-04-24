@@ -19,7 +19,7 @@ const Footer = () => {
         ease: "power4.out",
         scrollTrigger: {
           trigger: footerRef.current,
-          start: "top 80%",
+          start: "top 60%",
         },
       });
 
