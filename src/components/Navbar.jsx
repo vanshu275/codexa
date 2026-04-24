@@ -21,7 +21,7 @@ export default function Navbar() {
           <ul className="nav-links">
             {NAV_LINKS.map(({ name, href }) => (
               <li key={name}>
-                <a href={href} className="hover:text-blue-500 transition-colors">
+                <a href={href}>
                   {name}
                 </a>
               </li>
