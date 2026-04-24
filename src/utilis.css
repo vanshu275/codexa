@@ -1,12 +1,11 @@
-
 /*below this msg is just a theme so don't touch it */
 /* Futuristic Midnight Theme */
 
 :root {
   /* Background Colors */
-  --bg-primary: #000105;
-  --bg-secondary: #000106;
-  --bg-tertiary: #111827;
+  --bg-primary: #000000;
+  --bg-secondary: #050505;
+  --bg-tertiary: #0A0A0A;
 
   /* Futuristic Accent Colors */
   --accent-primary: #00e5ff;

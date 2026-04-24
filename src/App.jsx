@@ -6,18 +6,19 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Projects from "./components/Projects";
-import heroImage from "./assets/Group 16.svg";
-
+// Yahan apna hero image import karle agar pehle se hai, warna line 17 check kar
+// import heroImage from "./assets/hero-bg.png"; 
 
 export default function App() {
   return (
-    <main className="relative w-screen">
+    <main className="min-h-screen relative overflow-x-hidden bg-[#050505]">
       {/* Global Background Decoration */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl pointer-events-none opacity-70 z-0">
-        <img src={heroImage} alt="" className="w-full h-auto" />
+        {/* Agar heroImage nahi hai toh is <img> tag ko temporary comment kar dena */}
+        {/* <img src={heroImage} alt="" className="w-full h-auto" /> */}
       </div>
 
-      <div className="relative w-screen z-10">
+      <div className="relative z-10">
         <Navbar />
         <Hero />
         <Services />
@@ -27,7 +28,6 @@ export default function App() {
         <Contact />
         <Footer />
       </div>
-
-    </main>
+    </main> // Yahan pehle <main/> tha jo galat tha
   );
 }
