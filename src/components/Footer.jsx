@@ -10,19 +10,7 @@ const Footer = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Text Reveal Animation
-      gsap.from(".reveal-text", {
-        y: 100,
-        opacity: 0,
-        stagger: 0.1,
-        duration: 1,
-        ease: "power4.out",
-        scrollTrigger: {
-          trigger: footerRef.current,
-          start: "top 60%",
-        },
-      });
-
+     
       // Magnetic Circle Interaction
       const handleMouseMove = (e) => {
         const { clientX, clientY } = e;
@@ -63,7 +51,7 @@ const Footer = () => {
   return (
     <footer
       ref={footerRef}
-      className="relative w-full bg-[#080808] text-white overflow-hidden pt-32 pb-12"
+      className="relative w-full z-10 bg-[#080808] text-white overflow-hidden pt-32 pb-12"
     >
      
       <div className="max-w-400 mx-auto px-[5vw]">
@@ -71,8 +59,8 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-32 relative">
           <div className="max-w-4xl">
             <h2 className="text-[10vw] lg:text-[8.5vw] font-bold leading-[0.85] tracking-tighter mb-8 overflow-hidden">
-              <span className="reveal-text inline-block">HAVE A</span> <br />
-              <span className="reveal-text inline-block gradient-text italic">
+              <span className=" inline-block">HAVE A</span> <br />
+              <span className=" inline-block gradient-text italic">
                 PROJECT?
               </span>
             </h2>
