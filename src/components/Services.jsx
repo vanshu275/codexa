@@ -1,81 +1,89 @@
-import { useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+import { Swiper, SwiperSlide } from "swiper/react";
+import { useRef } from "react";
+
+import "swiper/css";
 
 export default function Services() {
   const containerRef = useRef(null);
-  const cardsRef = useRef([]);
 
   const services = [
     {
       title: "Web Design",
-      description:
-        "Beautiful, responsive websites tailored to your brand identity and user needs.",
+      description: "Crafting visually stunning, user-centric designs that turn visitors into loyal customers. We focus on modern aesthetics and seamless UX.",
       icon: "🎨",
     },
     {
-      title: "Web Development",
-      description:
-        "Robust, scalable web applications built with modern technologies and best practices.",
+      title: "Custom Development",
+      description: "Building high-performance, scalable web applications using the MERN stack, GSAP, and cutting-edge frontend technologies.",
       icon: "⚙️",
     },
     {
-      title: "Brand Strategy",
-      description:
-        "Strategic branding solutions that help your business stand out and connect with audiences.",
+      title: "Brand Identity",
+      description: "Defining your digital presence with unique brand strategies that resonate with your target audience and stand out in the market.",
       icon: "🎯",
     },
     {
-      title: "SEO Optimization",
-      description:
-        "Comprehensive SEO strategies to improve visibility and drive organic traffic.",
+      title: "SEO Excellence",
+      description: "Ranking your business where it matters. Our data-driven SEO strategies ensure maximum visibility and organic growth.",
       icon: "🔍",
     },
     {
-      title: "Digital Marketing",
-      description:
-        "Data-driven marketing campaigns that reach your target audience effectively.",
+      title: "Digital Growth",
+      description: "Scaling your impact with strategic marketing funnels and high-converting campaigns designed for modern businesses.",
       icon: "📊",
     },
   ];
 
   return (
-    <section 
-    id="services"
-    ref={containerRef} className="py-20 px-4 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-slate-200 mb-4">
-            Our Services
-          </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            Comprehensive solutions to help your business grow and thrive.
-          </p>
-        </div>
-
-        {/* Flex ki jagah Grid use kar rahe hain */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              ref={(el) => (cardsRef.current[index] = el)}
-              className="p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition-all duration-300 group bg-slate-50/50"
-            >
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-200">
-                {service.icon}
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">
-                {service.title}
-              </h3>
-              <p className="text-slate-600 leading-relaxed">
-                {service.description}
-              </p>
-            </div>
-          ))}
-        </div>
+    <section
+      id="services"
+      ref={containerRef}
+      className="py-25 max-w-[90%] mx-auto overflow-hidden " 
+    >
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
+          Our <span className="text-blue-500">Expertise</span>
+        </h2>
+        <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          We combine technical precision with creative excellence to deliver 
+          impactful digital solutions for your business.
+        </p>
       </div>
+
+      <Swiper
+        spaceBetween={30}
+        slidesPerView={1.2}
+        centeredSlides={true}
+        breakpoints={{
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 2.5 },
+        }}
+        onSlideChange={() => console.log("slide change")}
+        className="h-[50vh]"
+      >
+        {services.map((service, index) => (
+          <SwiperSlide 
+            key={index} 
+            className="flex flex-col justify-center items-center px-15 py-16 rounded-3xl 
+                       border-l border-r border-slate-700/50 backdrop-blur-md 
+                      bg-gradient-to-r from-[#1f4686] to-[#7C3AED]text-center transition-all duration-500 hover:bg-slate-900/50"
+          >
+            <div className="text-6xl mb-6 drop-shadow-lg">
+              {service.icon}
+            </div>
+            
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              {service.title}
+            </h3>
+            
+            <p className="text-slate-400 text-base md:text-lg max-w-md mx-auto leading-relaxed text-balance">
+              {service.description}
+            </p>
+            
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
 }

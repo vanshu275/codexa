@@ -42,7 +42,7 @@ export default function Hero() {
       {/* Spline Model - Integrated as Background element */}
       <div
         ref={splineRef}
-        className="absolute inset-0 w-full h-full opacity-40 pointer-events-none scale-125 md:scale-100"
+        className="absolute inset-0 w-screen h-full opacity-40 pointer-events-none scale-125 md:scale-100"
       >
         <iframe
           src="https://my.spline.design/circularsolarcopycopy-6eFpQwrEvBeFbEphs3DHhUAL-r0s/"

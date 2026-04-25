@@ -58,7 +58,7 @@ const Footer = () => {
         {/* Main Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-32 relative">
           <div className="max-w-4xl">
-            <h2 className="text-[10vw] lg:text-[8.5vw] font-bold leading-[0.85] tracking-tighter mb-8 overflow-hidden">
+            <h2 className="text-[10vw] lg:text-[8.5vw] font-extrabold brightness-200 leading-[0.85] tracking-tighter mb-8 overflow-hidden">
               <span className=" inline-block">HAVE A</span> <br />
               <span className=" inline-block gradient-text italic">
                 PROJECT?
