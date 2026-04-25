@@ -1,57 +1,102 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 import Aurora from "./ui/Aurora";
 
 export default function Hero() {
   const containerRef = useRef(null);
   const headingRef = useRef(null);
   const subRef = useRef(null);
+  const btnRef = useRef(null);
+  const splineRef = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+
+    // Initial load animations
+    tl.fromTo(
+      ".reveal-text",
+      { y: 80, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1.2, stagger: 0.2 },
+    )
+      .fromTo(
+        btnRef.current,
+        { scale: 0.9, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 0.8 },
+        "-=0.6",
+      )
+      .fromTo(
+        splineRef.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 2 },
+        "-=1",
+      );
+  }, []);
 
   return (
     <section
       id="hero"
       ref={containerRef}
-      className="hero-section relative overflow-hidden"
+     
+      className="hero-section relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent py-20"
     >
-      <div className="absolute inset-0 -z-10 pointer-events-none">
-        <Aurora
-          colorStops={["#3B82F6", "#7C3AED", "#06B6D4", "#A855F7"]}
-          amplitude={0.4}
-          blend={0.85}
-        />
+      {/* Spline Model - Integrated as Background element */}
+      <div
+        ref={splineRef}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-40 pointer-events-none scale-125 md:scale-100"
+      >
+        <iframe
+          src="https://my.spline.design/circularsolarcopycopy-6eFpQwrEvBeFbEphs3DHhUAL-r0s/"
+          className="w-full h-full border-none"
+        ></iframe>
       </div>
 
-      <div className="hero-content container text-center relative z-10 flex flex-col items-center gap-6">
-        <h1
-          ref={headingRef}
-          className="text-5xl sm:text-6xl lg:text-7xl leading-tight font-bold"
-        >
-          We Build Digital <span className="gradient-text">Experiences</span>{" "}
-          That Matter
-        </h1>
+      {/* Content Layer */}
+      <div className="container relative text-center px-6">
+        <div className="max-w-5xl mx-auto flex flex-col items-center gap-8">
+          <div className="overflow-hidden">
+            <h1
+              ref={headingRef}
+              className="reveal-text text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] text-white"
+            >
+              WE BUILD DIGITAL <br />
+              <span className="bg-gradient-to-r from-blue-500 via-cyan-400 to-purple-500 bg-clip-text text-transparent italic">
+                EXPERIENCES
+              </span>{" "}
+              <br />
+              THAT MATTER
+            </h1>
+          </div>
 
-        <p ref={subRef} className="text-lg sm:text-xl muted-text max-w-2xl mx-auto">
-          Creative solutions tailored to elevate your brand and drive results.
-          Let&apos;s transform your vision into reality.
-        </p>
+          <div className="overflow-hidden">
+            <p
+              ref={subRef}
+              className="reveal-text text-lg sm:text-2xl text-white/60 max-w-2xl mx-auto font-light leading-relaxed"
+            >
+              Codexa is a creative engineering studio focused on building
+              high-performance web products with precision.
+            </p>
+          </div>
 
-        <div className="flex flex-col sm:flex-row gap-6 justify-center">
-          <a href="#contact">
-            <button className="btn-primary text-lg">Start Your Project</button>
-          </a>
-          <a href="#why-us">
-            <button className="btn-outline text-lg">Learn More</button>
-          </a>
+          <div ref={btnRef} className="flex flex-col sm:flex-row gap-5 mt-4">
+            <a href="#contact" className="group relative">
+              <button className="px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-blue-600 hover:text-white transition-all duration-500 flex items-center gap-2">
+                Start Your Project
+                <span className="group-hover:translate-x-1 transition-transform">
+                  →
+                </span>
+              </button>
+            </a>
+            <a href="#why-us">
+              <button className="px-8 py-4 border border-white/20 text-white font-medium rounded-full backdrop-blur-md hover:bg-white/10 transition-all duration-300">
+                Learn More
+              </button>
+            </a>
+          </div>
         </div>
       </div>
-      <div className="w-full flex justify-center items-center mt-10 relative z-10">
-        <div className="w-[500px] h-[500px]">
-          <iframe
-            src="https://my.spline.design/circularsolarcopycopy-6eFpQwrEvBeFbEphs3DHhUAL-r0s/"
-            frameBorder="0"
-            className="w-full h-full border-none"
-          ></iframe>
-        </div>
-      </div>
+
+      {/* Decorative Gradient Overlay for UX Depth */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#050505] to-transparent z-10"></div>
     </section>
   );
 }

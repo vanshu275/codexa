@@ -1,3 +1,5 @@
+import Aurora from "./components/ui/Aurora";
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
@@ -6,12 +8,20 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Projects from "./components/Projects";
-// Yahan apna hero image import karle agar pehle se hai, warna line 17 check kar
-// import heroImage from "./assets/hero-bg.png"; 
 
 export default function App() {
   return (
-    <main>
+    <main className="relative min-h-screen bg-[#050505]">
+     
+      {/* <div className="fixed inset-0 z-0 pointer-events-none">
+        <Aurora
+          colorStops={["#3B82F6", "#7C3AED", "#06B6D4", "#A855F7"]}
+          amplitude={0.3}
+          blend={0.9}
+        />
+      </div> */}
+
+  
       <div className="relative z-10">
         <Navbar />
         <Hero />
@@ -22,6 +32,6 @@ export default function App() {
         <Contact />
         <Footer />
       </div>
-    </main> 
+    </main>
   );
 }
