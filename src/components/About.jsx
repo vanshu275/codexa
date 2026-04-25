@@ -40,19 +40,19 @@ export default function About() {
           ref={contentRef}
           className="max-w-3xl mb-16  m-auto"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-6 text-balance">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-300 mb-6 text-balance">
             About Our Agency
           </h2>
-          <p className="text-lg text-slate-600 mb-4 leading-relaxed">
+          <p className="text-lg text-slate-400 mb-4 leading-relaxed">
             Founded in 2019, we&apos;ve grown from a small creative team to a full-service digital agency. Our mission is to empower businesses through innovative digital solutions.
           </p>
-          <p className="text-lg text-slate-600 leading-relaxed">
+          <p className="text-lg text-slate-400 leading-relaxed">
             We believe in collaboration, creativity, and delivering measurable results. Every project is an opportunity to make a meaningful impact on our clients&apos; businesses and their customers.
           </p>
         </div>
 
         <div>
-          <h3 className="text-3xl font-bold text-slate-900 mb-12">Our Team</h3>
+          <h3 className="text-3xl font-bold text-slate-300 mb-12">Our Team</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7 ">
             {team.map((member, index) => (
               <div

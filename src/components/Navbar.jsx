@@ -11,7 +11,7 @@ export default function Navbar() {
 
 
   return (
-    <nav className="navbar">
+    <nav className="navbar z-40 h-[10vh]  ">
       <div className="container">
         <div className="nav-wrapper">
           <a href="#hero" className="logo select-none">

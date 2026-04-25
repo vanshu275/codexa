@@ -47,10 +47,10 @@ export default function Services() {
     ref={containerRef} className="py-20 px-4 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-200 mb-4">
             Our Services
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
             Comprehensive solutions to help your business grow and thrive.
           </p>
         </div>

@@ -36,10 +36,10 @@ export default function Contact() {
     <section id='contact' ref={containerRef} className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4 text-balance">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-300 mb-4 text-balance">
             Let&apos;s Work Together
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto text-balance">
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto text-balance">
             Have a project in mind? Get in touch with us to discuss how we can help your business grow.
           </p>
         </div>
@@ -51,7 +51,7 @@ export default function Contact() {
         >
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-semibold text-slate-900 mb-2">
+              <label htmlFor="name" className="block text-sm font-semibold text-slate-300 mb-2">
                 Full Name
               </label>
               <input
@@ -65,7 +65,7 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-semibold text-slate-900 mb-2">
+              <label htmlFor="email" className="block text-sm font-semibold text-slate-300 mb-2">
                 Email Address
               </label>
               <input
@@ -81,7 +81,7 @@ export default function Contact() {
           </div>
 
           <div>
-            <label htmlFor="subject" className="block text-sm font-semibold text-slate-900 mb-2">
+            <label htmlFor="subject" className="block text-sm font-semibold text-slate-300 mb-2">
               Subject
             </label>
             <input
@@ -96,7 +96,7 @@ export default function Contact() {
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-semibold text-slate-900 mb-2">
+            <label htmlFor="message" className="block text-sm font-semibold text-slate-300 mb-2">
               Message
             </label>
             <textarea

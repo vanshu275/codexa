@@ -37,12 +37,12 @@ export default function Hero() {
       id="hero"
       ref={containerRef}
      
-      className="hero-section relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent py-20"
+      className=" relative h-[90vh] mt-[10vh] flex items-center justify-center overflow-hidden bg-transparent "
     >
       {/* Spline Model - Integrated as Background element */}
       <div
         ref={splineRef}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-40 pointer-events-none scale-125 md:scale-100"
+        className="absolute inset-0 w-full h-full opacity-40 pointer-events-none scale-125 md:scale-100"
       >
         <iframe
           src="https://my.spline.design/circularsolarcopycopy-6eFpQwrEvBeFbEphs3DHhUAL-r0s/"
@@ -51,7 +51,7 @@ export default function Hero() {
       </div>
 
       {/* Content Layer */}
-      <div className="container relative text-center px-6">
+      <div className=" relative text-center px-6 h-[80vh] mt-[23vh]  ">
         <div className="max-w-5xl mx-auto flex flex-col items-center gap-8">
           <div className="overflow-hidden">
             <h1
@@ -59,7 +59,7 @@ export default function Hero() {
               className="reveal-text text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] text-white"
             >
               WE BUILD DIGITAL <br />
-              <span className="bg-gradient-to-r from-blue-500 via-cyan-400 to-purple-500 bg-clip-text text-transparent italic">
+              <span className="bg-linear-to-r from-blue-500 via-cyan-400 to-purple-500 bg-clip-text text-transparent italic">
                 EXPERIENCES
               </span>{" "}
               <br />
@@ -96,7 +96,7 @@ export default function Hero() {
       </div>
 
       {/* Decorative Gradient Overlay for UX Depth */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#050505] to-transparent z-10"></div>
+      <div className="absolute bottom-0 left-0 w-full h-[10vh] bg-black  z-10"></div>
     </section>
   );
 }

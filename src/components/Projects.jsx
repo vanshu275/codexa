@@ -49,10 +49,10 @@ export default function Projects() {
     <section id='projects' ref={containerRef} className="py-20 px-4 ">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4 text-balance">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-300 mb-4 text-balance">
             Recent Projects
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto text-balance">
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto text-balance">
             Explore our portfolio of successful digital solutions.
           </p>
         </div>
