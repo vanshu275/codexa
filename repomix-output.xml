@@ -1,0 +1,2141 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+.gitignore
+components.json
+eslint.config.js
+feature_and_tool .txt
+index.html
+jsconfig.json
+package.json
+README.md
+src/App.jsx
+src/assets/project-video-thumbnail/game-showcase.webp
+src/assets/project-video-thumbnail/metaverse-web3.webp
+src/assets/project-video-thumbnail/music-streaming-with-ai.webp
+src/assets/project-video-thumbnail/portfolio-website.webp
+src/assets/project-video-thumbnail/Spotify-but-better.webp
+src/assets/project-video/game-showcase.webm
+src/assets/project-video/metaverse-web3.webm
+src/assets/project-video/music-streaming-with-ai.webm
+src/assets/project-video/portfolio-website.webm
+src/assets/project-video/Spotify-but-better.webm
+src/components/About.jsx
+src/components/Contact.jsx
+src/components/Footer.jsx
+src/components/Hero.jsx
+src/components/Navbar.jsx
+src/components/Projects.jsx
+src/components/Services.jsx
+src/components/ui/Aurora.jsx
+src/components/WhyUs.jsx
+src/index.css
+src/lib/utils.js
+src/main.jsx
+src/utilis.css
+vite.config.js
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path=".gitignore">
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+</file>
+
+<file path="components.json">
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "radix-vega",
+  "rsc": false,
+  "tsx": false,
+  "tailwind": {
+    "config": "",
+    "css": "src/index.css",
+    "baseColor": "neutral",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "iconLibrary": "lucide",
+  "rtl": false,
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "lib": "@/lib",
+    "hooks": "@/hooks"
+  },
+  "menuColor": "default",
+  "menuAccent": "subtle",
+  "registries": {
+    "@react-bits": "https://reactbits.dev/r/{name}.json"
+  }
+}
+</file>
+
+<file path="eslint.config.js">
+import js from '@eslint/js'
+import globals from 'globals'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import { defineConfig, globalIgnores } from 'eslint/config'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{js,jsx}'],
+    extends: [
+      js.configs.recommended,
+      reactHooks.configs.flat.recommended,
+      reactRefresh.configs.vite,
+    ],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        ecmaFeatures: { jsx: true },
+        sourceType: 'module',
+      },
+    },
+    rules: {
+      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+    },
+  },
+])
+</file>
+
+<file path="feature_and_tool .txt">
+TOOL 
+react
+tailwind
+gsap
+
+
+
+
+
+
+
+
+FEATURES
+</file>
+
+<file path="jsconfig.json">
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}
+</file>
+
+<file path="README.md">
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+</file>
+
+<file path="src/components/ui/Aurora.jsx">
+import { Renderer, Program, Mesh, Color, Triangle } from 'ogl';
+import { useEffect, useRef } from 'react';
+
+const VERT = `#version 300 es
+in vec2 position;
+void main() {
+  gl_Position = vec4(position, 0.0, 1.0);
+}
+`;
+
+const FRAG = `#version 300 es
+precision highp float;
+
+uniform float uTime;
+uniform float uAmplitude;
+uniform vec3 uColorStops[3];
+uniform vec2 uResolution;
+uniform float uBlend;
+
+out vec4 fragColor;
+
+vec3 permute(vec3 x) {
+  return mod(((x * 34.0) + 1.0) * x, 289.0);
+}
+
+float snoise(vec2 v){
+  const vec4 C = vec4(
+      0.211324865405187, 0.366025403784439,
+      -0.577350269189626, 0.024390243902439
+  );
+  vec2 i  = floor(v + dot(v, C.yy));
+  vec2 x0 = v - i + dot(i, C.xx);
+  vec2 i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+  vec4 x12 = x0.xyxy + C.xxzz;
+  x12.xy -= i1;
+  i = mod(i, 289.0);
+
+  vec3 p = permute(
+      permute(i.y + vec3(0.0, i1.y, 1.0))
+    + i.x + vec3(0.0, i1.x, 1.0)
+  );
+
+  vec3 m = max(
+      0.5 - vec3(
+          dot(x0, x0),
+          dot(x12.xy, x12.xy),
+          dot(x12.zw, x12.zw)
+      ), 
+      0.0
+  );
+  m = m * m;
+  m = m * m;
+
+  vec3 x = 2.0 * fract(p * C.www) - 1.0;
+  vec3 h = abs(x) - 0.5;
+  vec3 ox = floor(x + 0.5);
+  vec3 a0 = x - ox;
+  m *= 1.79284291400159 - 0.85373472095314 * (a0*a0 + h*h);
+
+  vec3 g;
+  g.x  = a0.x  * x0.x  + h.x  * x0.y;
+  g.yz = a0.yz * x12.xz + h.yz * x12.yw;
+  return 130.0 * dot(m, g);
+}
+
+struct ColorStop {
+  vec3 color;
+  float position;
+};
+
+#define COLOR_RAMP(colors, factor, finalColor) {              \
+  int index = 0;                                            \
+  for (int i = 0; i < 2; i++) {                               \
+     ColorStop currentColor = colors[i];                    \
+     bool isInBetween = currentColor.position <= factor;    \
+     index = int(mix(float(index), float(i), float(isInBetween))); \
+  }                                                         \
+  ColorStop currentColor = colors[index];                   \
+  ColorStop nextColor = colors[index + 1];                  \
+  float range = nextColor.position - currentColor.position; \
+  float lerpFactor = (factor - currentColor.position) / range; \
+  finalColor = mix(currentColor.color, nextColor.color, lerpFactor); \
+}
+
+void main() {
+  vec2 uv = gl_FragCoord.xy / uResolution;
+  
+  ColorStop colors[3];
+  colors[0] = ColorStop(uColorStops[0], 0.0);
+  colors[1] = ColorStop(uColorStops[1], 0.5);
+  colors[2] = ColorStop(uColorStops[2], 1.0);
+  
+  vec3 rampColor;
+  COLOR_RAMP(colors, uv.x, rampColor);
+  
+  float height = snoise(vec2(uv.x * 2.0 + uTime * 0.1, uTime * 0.25)) * 0.5 * uAmplitude;
+  height = exp(height);
+  height = (uv.y * 2.0 - height + 0.2);
+  float intensity = 0.6 * height;
+  
+  float midPoint = 0.20;
+  float auroraAlpha = smoothstep(midPoint - uBlend * 0.5, midPoint + uBlend * 0.5, intensity);
+  
+  vec3 auroraColor = intensity * rampColor;
+  
+  fragColor = vec4(auroraColor * auroraAlpha, auroraAlpha);
+}
+`;
+
+export default function Aurora(props) {
+  const { colorStops = ['#5227FF', '#7cff67', '#5227FF'], amplitude = 1.0, blend = 0.5 } = props;
+  const propsRef = useRef(props);
+  propsRef.current = props;
+
+  const ctnDom = useRef(null);
+
+  useEffect(() => {
+    const ctn = ctnDom.current;
+    if (!ctn) return;
+
+    const renderer = new Renderer({
+      alpha: true,
+      premultipliedAlpha: true,
+      antialias: true
+    });
+    const gl = renderer.gl;
+    gl.clearColor(0, 0, 0, 0);
+    gl.enable(gl.BLEND);
+    gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
+    gl.canvas.style.backgroundColor = 'transparent';
+
+    let program;
+
+    function resize() {
+      if (!ctn) return;
+      const width = ctn.offsetWidth;
+      const height = ctn.offsetHeight;
+      renderer.setSize(width, height);
+      if (program) {
+        program.uniforms.uResolution.value = [width, height];
+      }
+    }
+    window.addEventListener('resize', resize);
+
+    const geometry = new Triangle(gl);
+    if (geometry.attributes.uv) {
+      delete geometry.attributes.uv;
+    }
+
+    const colorStopsArray = colorStops.map(hex => {
+      const c = new Color(hex);
+      return [c.r, c.g, c.b];
+    });
+
+    program = new Program(gl, {
+      vertex: VERT,
+      fragment: FRAG,
+      uniforms: {
+        uTime: { value: 0 },
+        uAmplitude: { value: amplitude },
+        uColorStops: { value: colorStopsArray },
+        uResolution: { value: [ctn.offsetWidth, ctn.offsetHeight] },
+        uBlend: { value: blend }
+      }
+    });
+
+    const mesh = new Mesh(gl, { geometry, program });
+    ctn.appendChild(gl.canvas);
+
+    let animateId = 0;
+    const update = t => {
+      animateId = requestAnimationFrame(update);
+      const { time = t * 0.01, speed = 1.0 } = propsRef.current;
+      program.uniforms.uTime.value = time * speed * 0.1;
+      program.uniforms.uAmplitude.value = propsRef.current.amplitude ?? 1.0;
+      program.uniforms.uBlend.value = propsRef.current.blend ?? blend;
+      const stops = propsRef.current.colorStops ?? colorStops;
+      program.uniforms.uColorStops.value = stops.map(hex => {
+        const c = new Color(hex);
+        return [c.r, c.g, c.b];
+      });
+      renderer.render({ scene: mesh });
+    };
+    animateId = requestAnimationFrame(update);
+
+    resize();
+
+    return () => {
+      cancelAnimationFrame(animateId);
+      window.removeEventListener('resize', resize);
+      if (ctn && gl.canvas.parentNode === ctn) {
+        ctn.removeChild(gl.canvas);
+      }
+      gl.getExtension('WEBGL_lose_context')?.loseContext();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [amplitude]);
+
+  return <div ref={ctnDom} className="w-full h-full" />;
+}
+</file>
+
+<file path="src/lib/utils.js">
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge"
+
+export function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
+</file>
+
+<file path="src/utilis.css">
+/*below this msg is just a theme so don't touch it */
+/* Futuristic Midnight Theme */
+
+:root {
+  /* Background Colors */
+  --bg-primary: #000000;
+  --bg-secondary: #050505;
+  --bg-tertiary: #0A0A0A;
+
+  /* Futuristic Accent Colors */
+  --accent-primary: #00e5ff;
+  --accent-secondary: #7c3aed;
+  --accent-soft: #38bdf8;
+  --accent-glow: rgba(0, 229, 255, 0.18);
+
+  /* Text Colors */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  /* Border + Effects */
+  --border-color: rgba(255, 255, 255, 0.08);
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 40px rgba(0, 229, 255, 0.12);
+  --radius: 18px;
+  --transition: all 0.3s ease;
+
+  /* Typography */
+  --font-heading: 'Sora', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+</file>
+
+<file path="index.html">
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codexa</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
+</file>
+
+<file path="package.json">
+{
+  "name": "codexa",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.2.8",
+    "@gsap/react": "^2.1.2",
+    "@tailwindcss/vite": "^4.2.4",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "gsap": "^3.15.0",
+    "lucide-react": "^1.11.0",
+    "ogl": "^1.0.11",
+    "radix-ui": "^1.4.3",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "shadcn": "^4.4.0",
+    "swiper": "^12.1.3",
+    "tailwind-merge": "^3.5.0",
+    "tailwindcss": "^4.2.4",
+    "tw-animate-css": "^1.4.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.5.0",
+    "vite": "^8.0.9"
+  }
+}
+</file>
+
+<file path="src/main.jsx">
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import App from './App.jsx'
+import './index.css'
+import './utilis.css'
+
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
+</file>
+
+<file path="vite.config.js">
+import path from "path"
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [tailwindcss(), react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+})
+</file>
+
+<file path="src/components/WhyUs.jsx">
+'use client';
+
+import {  useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+export default function WhyUs() {
+  const containerRef = useRef(null);
+  const highlightsRef = useRef([]);
+
+  const highlights = [
+    {
+      number: '5+',
+      label: 'Years Experience',
+      description: 'Proven track record of delivering excellence.',
+    },
+    {
+      number: '150+',
+      label: 'Projects Completed',
+      description: 'Wide range of successful client projects.',
+    },
+    {
+      number: '50+',
+      label: 'Happy Clients',
+      description: 'Long-term partnerships and satisfied customers.',
+    },
+    {
+      number: '24/7',
+      label: 'Support',
+      description: 'Dedicated support throughout your project journey.',
+    },
+  ];
+
+
+  return (
+    <section id='why-us' ref={containerRef} className="py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-balance">
+            Why Choose Us
+          </h2>
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto text-balance">
+            We combine creativity, strategy, and technology to deliver exceptional results.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {highlights.map((highlight, index) => (
+            <div
+              key={index}
+              ref={(el) => (highlightsRef.current[index] = el)}
+              className="text-center p-6 rounded-lg border border-slate-700 hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300"
+            >
+              <div className="text-5xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                {highlight.number}
+              </div>
+              <h3 className="text-lg font-semibold mb-2">{highlight.label}</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                {highlight.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+</file>
+
+<file path="src/components/About.jsx">
+'use client';
+
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+export default function About() {
+  const containerRef = useRef(null);
+  const contentRef = useRef(null);
+  const teamRef = useRef([]);
+
+  const team = [
+    {
+      name: 'Vansh Upadhyay',
+      role: 'Creative Director',
+      bio: 'Leads our creative vision with 8 years of design expertise.',
+    },
+    {
+      name: 'Dileep Kumawat',
+      role: 'Lead Developer',
+      bio: 'Builds scalable solutions with 10 years of development experience.',
+    },
+    {
+      name: 'Lakshay Kumar',
+      role: 'Strategy Lead',
+      bio: 'Drives strategic initiatives with 7 years of business acumen.',
+    },
+  
+  ];
+
+
+ 
+
+  return (
+    <section id='about' ref={containerRef} className="py-20 px-4  items-center text-center">
+      <div className="max-w-7xl mx-auto">
+        <div
+          ref={contentRef}
+          className="max-w-3xl mb-16  m-auto"
+        >
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-300 mb-6 text-balance">
+            About Our Agency
+          </h2>
+          <p className="text-lg text-slate-400 mb-4 leading-relaxed">
+            Founded in 2019, we&apos;ve grown from a small creative team to a full-service digital agency. Our mission is to empower businesses through innovative digital solutions.
+          </p>
+          <p className="text-lg text-slate-400 leading-relaxed">
+            We believe in collaboration, creativity, and delivering measurable results. Every project is an opportunity to make a meaningful impact on our clients&apos; businesses and their customers.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-3xl font-bold text-slate-300 mb-12">Our Team</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7 ">
+            {team.map((member, index) => (
+              <div
+                key={index}
+                ref={(el) => (teamRef.current[index] = el)}
+                className="p-6 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-300"
+              >
+                <div className="w-full h-32 bg-linear-to-br from-slate-200 to-slate-300 rounded-lg mb-4"></div>
+                <h4 className="text-lg font-bold text-slate-900 mb-1">
+                  {member.name}
+                </h4>
+                <p className="text-sm font-semibold text-slate-600 mb-3">
+                  {member.role}
+                </p>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  {member.bio}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+</file>
+
+<file path="src/components/Contact.jsx">
+import {  useRef, useState } from 'react';
+
+
+export default function Contact() {
+  const containerRef = useRef(null);
+  const formRef = useRef(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+  const [submitted, setSubmitted] = useState(false);
+
+ 
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Simple form validation
+    if (formData.name && formData.email && formData.message) {
+      setSubmitted(true);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setTimeout(() => setSubmitted(false), 3000);
+    }
+  };
+
+  return (
+    <section id='contact' ref={containerRef} className="py-20 px-4">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-300 mb-4 text-balance">
+            Let&apos;s Work Together
+          </h2>
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto text-balance">
+            Have a project in mind? Get in touch with us to discuss how we can help your business grow.
+          </p>
+        </div>
+
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="space-y-6  p-8 rounded-lg border border-gray-200 "
+        >
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="name" className="block text-sm font-semibold text-slate-300 mb-2">
+                Full Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Your name"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-all"
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="block text-sm font-semibold text-slate-300 mb-2">
+                Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="your@email.com"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-all"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label htmlFor="subject" className="block text-sm font-semibold text-slate-300 mb-2">
+              Subject
+            </label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              placeholder="Project details"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-all"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="message" className="block text-sm font-semibold text-slate-300 mb-2">
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Tell us about your project..."
+              rows="6"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-all resize-none"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            className="w-full px-8 py-3 bg-slate-900 text-white rounded-lg font-semibold hover:bg-slate-800 transition-colors duration-200 text-lg"
+          >
+            Send Message
+          </button>
+
+          {submitted && (
+            <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
+              Thank you! We&apos;ll get back to you soon.
+            </div>
+          )}
+        </form>
+      </div>
+    </section>
+  );
+}
+</file>
+
+<file path="src/components/Projects.jsx">
+import { useRef, useEffect, useState, useCallback } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
+import thumbSpotify from '../assets/project-video-thumbnail/Spotify-but-better.webp';
+import thumbGame from '../assets/project-video-thumbnail/game-showcase.webp';
+import thumbMeta from '../assets/project-video-thumbnail/metaverse-web3.webp';
+import thumbMusic from '../assets/project-video-thumbnail/music-streaming-with-ai.webp';
+import thumbPortfolio from '../assets/project-video-thumbnail/portfolio-website.webp';
+import vidSpotify from '../assets/project-video/Spotify-but-better.webm';
+import vidGame from '../assets/project-video/game-showcase.webm';
+import vidMeta from '../assets/project-video/metaverse-web3.webm';
+import vidMusic from '../assets/project-video/music-streaming-with-ai.webm';
+import vidPortfolio from '../assets/project-video/portfolio-website.webm';
+
+const projects = [
+  {
+    title: 'Spotify — But Better',
+    description: 'A reimagined music streaming experience with superior UI, social features, and real-time collaborative playlists that redefine how people discover music.',
+    tech: ['React', 'Node.js', 'MongoDB', 'Rest API', 'JWT', 'Zustand', 'TailwindCSS', 'Spline'],
+    thumbnail: thumbSpotify, video: vidSpotify, cta: 'View Project',
+  },
+  {
+    title: 'Game Showcase Platform',
+    description: 'An immersive game discovery platform featuring cinematic trailers, community reviews, and personalized recommendation engine powered by machine learning.',
+    tech: ['Next.js', 'TailwindCSS', 'JavaScript'],
+    thumbnail: thumbGame, video: vidGame, cta: 'View Project',
+  },
+  {
+    title: 'Metaverse Web3 Portal',
+    description: 'A decentralized gateway to virtual worlds — featuring wallet integration, NFT galleries, and real-time multiplayer environments on the blockchain.',
+    tech: ['Solidity', 'React', 'TailwindCSS',],
+    thumbnail: thumbMeta, video: vidMeta, cta: 'View Project',
+  },
+  {
+    title: 'AI Music Streaming',
+    description: 'Next-generation streaming service with AI-curated playlists, mood detection, and adaptive audio quality that learns your listening preferences.',
+    tech: ['Python', 'TensorFlow', 'React', 'AWS', 'TailwindCSS'],
+    thumbnail: thumbMusic, video: vidMusic, cta: 'View Project',
+  },
+  {
+    title: 'Portfolio Website',
+    description: 'A stunning creative portfolio with 3D interactions, scroll-driven storytelling, and seamless animations that showcase work with cinematic flair.',
+    tech: ['React', 'GSAP', 'TailwindCSS', 'JavaScript'],
+    thumbnail: thumbPortfolio, video: vidPortfolio, cta: 'View Project',
+  },
+];
+
+/* ── Word-by-word split text component ── */
+function SplitWords({ text, className, style, refCallback }) {
+  return (
+    <span className={className} style={{ ...style, display: 'inline' }} ref={refCallback}>
+      {text.split(' ').map((word, i) => (
+        <span key={i} style={{ display: 'inline-block', overflow: 'hidden', verticalAlign: 'top' }}>
+          <span className="split-word" style={{ display: 'inline-block', willChange: 'transform, opacity' }}>
+            {word}
+          </span>
+          {i < text.split(' ').length - 1 && <span>&nbsp;</span>}
+        </span>
+      ))}
+    </span>
+  );
+}
+
+/* ── Animate split words helper ── */
+function animateSplitWords(container, triggerEl, delay = 0) {
+  if (!container) return;
+  const words = container.querySelectorAll('.split-word');
+  if (!words.length) return;
+  gsap.fromTo(words,
+    { y: '110%', opacity: 0, rotateX: 40 },
+    {
+      y: '0%', opacity: 1, rotateX: 0,
+      duration: 0.8, stagger: 0.04, delay,
+      ease: 'power4.out',
+      scrollTrigger: { trigger: triggerEl, start: 'top 78%', toggleActions: 'play none none none' },
+    }
+  );
+}
+
+/* ══════ VIDEO MODAL ══════ */
+function VideoModal({ project, onClose }) {
+  const overlayRef = useRef(null);
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    const tl = gsap.timeline();
+    tl.fromTo(overlayRef.current, { opacity: 0 }, { opacity: 1, duration: 0.35, ease: 'power2.out' });
+    tl.fromTo(contentRef.current, { opacity: 0, scale: 0.92, y: 40 }, { opacity: 1, scale: 1, y: 0, duration: 0.45, ease: 'power3.out' }, '-=0.15');
+    return () => { document.body.style.overflow = ''; };
+  }, []);
+
+  const handleClose = useCallback(() => {
+    const tl = gsap.timeline({ onComplete: onClose });
+    tl.to(contentRef.current, { opacity: 0, scale: 0.92, y: 30, duration: 0.3, ease: 'power2.in' });
+    tl.to(overlayRef.current, { opacity: 0, duration: 0.25, ease: 'power2.in' }, '-=0.15');
+  }, [onClose]);
+
+  return (
+    <div ref={overlayRef} onClick={handleClose} className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-8"
+      style={{ background: 'rgba(0,0,0,0.88)', backdropFilter: 'blur(12px)' }}>
+      <div ref={contentRef} onClick={e => e.stopPropagation()} className="relative w-full max-w-5xl">
+        <button onClick={handleClose}
+          className="absolute -top-12 right-0 text-white/60 hover:text-white transition-colors text-sm tracking-widest uppercase flex items-center gap-2 cursor-pointer">
+          Close
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6L6 18M6 6l12 12" /></svg>
+        </button>
+        <div className="relative rounded-2xl overflow-hidden"
+          style={{ border: '1px solid rgba(255,255,255,0.08)', boxShadow: '0 0 80px rgba(0,229,255,0.08), 0 25px 60px rgba(0,0,0,0.6)' }}>
+          <video src={project.video} controls autoPlay className="w-full aspect-video bg-black" />
+        </div>
+        <div className="mt-6 flex items-center justify-between">
+          <div>
+            <h3 className="text-white text-xl font-semibold tracking-tight">{project.title}</h3>
+            <div className="flex flex-wrap gap-2 mt-2">
+              {project.tech.map(t => (
+                <span key={t} className="text-xs tracking-wider uppercase px-3 py-1 rounded-full"
+                  style={{ background: 'rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.5)', border: '1px solid rgba(255,255,255,0.06)' }}>{t}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ══════ CARD INNER (shared) ══════ */
+function CardInner({ project, imageRef, titleRef, descRef, techRef, ctaRef, onPlay }) {
+  return (
+    <div className="rounded-2xl overflow-hidden transition-all duration-500"
+      style={{ background: '#0a0a0a', border: '1px solid rgba(255,255,255,0.06)', boxShadow: '0 4px 40px rgba(0,0,0,0.4)' }}>
+      {/* Thumbnail */}
+      <div ref={imageRef} className="relative overflow-hidden cursor-pointer" onClick={() => onPlay(project)}>
+        <img src={project.thumbnail} alt={project.title}
+          className="w-full aspect-[16/10] object-cover transition-transform duration-700 group-hover:scale-105" />
+        <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/40 transition-all duration-500">
+          <div className="w-14 h-14 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 scale-75 group-hover:scale-100"
+            style={{ background: 'rgba(0,229,255,0.15)', border: '1px solid rgba(0,229,255,0.4)', backdropFilter: 'blur(8px)' }}>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#00e5ff"><path d="M8 5v14l11-7z" /></svg>
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 h-16" style={{ background: 'linear-gradient(to top, #0a0a0a, transparent)' }} />
+      </div>
+
+      {/* Text Content with split word animation refs */}
+      <div className="p-5 sm:p-6 pt-3">
+        <h3 ref={titleRef} className="text-lg sm:text-xl font-bold tracking-tight mb-2" style={{ color: '#f0f0f0', perspective: '600px' }}>
+          <SplitWords text={project.title} />
+        </h3>
+
+        <div ref={descRef} style={{ overflow: 'hidden', perspective: '600px' }}>
+          <p className="text-sm leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.45)', lineHeight: 1.7, clipPath: 'inset(0 0 0 0)' }}>
+            {project.description}
+          </p>
+        </div>
+
+        <div ref={techRef} className="flex flex-wrap gap-2 mb-5">
+          {project.tech.map(t => (
+            <span key={t} className="tech-tag text-[11px] tracking-wider uppercase px-3 py-1 rounded-full"
+              style={{ background: 'rgba(255,255,255,0.04)', color: 'rgba(0,229,255,0.7)', border: '1px solid rgba(0,229,255,0.1)' }}>{t}</span>
+          ))}
+        </div>
+
+        <div ref={ctaRef}>
+          <button onClick={() => onPlay(project)}
+            className="inline-flex items-center gap-2 text-sm font-medium tracking-wide cursor-pointer transition-all duration-300 group/cta"
+            style={{ color: '#00e5ff' }}>
+            <span className="group-hover/cta:tracking-widest transition-all duration-300">{project.cta}</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+              className="transition-transform duration-300 group-hover/cta:translate-x-1"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ══════ PREMIUM TEXT ANIMATION HOOK ══════ */
+function useCardTextAnimation(cardRef, titleRef, descRef, techRef, ctaRef, imageRef, deps = []) {
+  useEffect(() => {
+    const card = cardRef.current;
+    if (!card) return;
+
+    const ctx = gsap.context(() => {
+      // Image clipPath reveal
+      if (imageRef?.current) {
+        gsap.fromTo(imageRef.current,
+          { clipPath: 'inset(0 100% 0 0)', opacity: 0 },
+          {
+            clipPath: 'inset(0 0% 0 0)', opacity: 1,
+            duration: 1.1, ease: 'power3.inOut',
+            scrollTrigger: { trigger: card, start: 'top 82%', toggleActions: 'play none none none' },
+          }
+        );
+      }
+
+      // Title — word-by-word 3D reveal
+      animateSplitWords(titleRef?.current, card, 0.15);
+
+      // Description — slide up with clipPath
+      if (descRef?.current) {
+        gsap.fromTo(descRef.current,
+          { y: 30, opacity: 0, clipPath: 'inset(100% 0 0 0)' },
+          {
+            y: 0, opacity: 1, clipPath: 'inset(0% 0 0 0)',
+            duration: 0.9, delay: 0.35, ease: 'power3.out',
+            scrollTrigger: { trigger: card, start: 'top 78%', toggleActions: 'play none none none' },
+          }
+        );
+      }
+
+      // Tech tags — stagger pop in
+      if (techRef?.current) {
+        const tags = techRef.current.querySelectorAll('.tech-tag');
+        gsap.fromTo(tags,
+          { scale: 0, opacity: 0, y: 10 },
+          {
+            scale: 1, opacity: 1, y: 0,
+            duration: 0.5, stagger: 0.08, delay: 0.5, ease: 'back.out(2)',
+            scrollTrigger: { trigger: card, start: 'top 78%', toggleActions: 'play none none none' },
+          }
+        );
+      }
+
+      // CTA — slide from left
+      if (ctaRef?.current) {
+        gsap.fromTo(ctaRef.current,
+          { x: -30, opacity: 0 },
+          {
+            x: 0, opacity: 1,
+            duration: 0.7, delay: 0.65, ease: 'power3.out',
+            scrollTrigger: { trigger: card, start: 'top 78%', toggleActions: 'play none none none' },
+          }
+        );
+      }
+    });
+
+    return () => ctx.revert();
+  }, deps);
+}
+
+/* ══════ DESKTOP TIMELINE CARD ══════ */
+function ProjectCard({ project, index, onPlay }) {
+  const cardRef = useRef(null);
+  const imageRef = useRef(null);
+  const titleRef = useRef(null);
+  const descRef = useRef(null);
+  const techRef = useRef(null);
+  const ctaRef = useRef(null);
+  const lineRef = useRef(null);
+  const isLeft = index % 2 === 0;
+
+  // Card slide-in + connector
+  useEffect(() => {
+    const card = cardRef.current;
+    if (!card) return;
+    const ctx = gsap.context(() => {
+      gsap.fromTo(card,
+        { opacity: 0, x: isLeft ? -80 : 80, y: 40 },
+        {
+          opacity: 1, x: 0, y: 0, duration: 1, ease: 'power3.out',
+          scrollTrigger: { trigger: card, start: 'top 82%', end: 'top 55%', toggleActions: 'play none none none' }
+        }
+      );
+      if (lineRef.current) {
+        gsap.fromTo(lineRef.current, { scaleX: 0 },
+          {
+            scaleX: 1, duration: 0.8, ease: 'power2.out',
+            scrollTrigger: { trigger: card, start: 'top 78%', toggleActions: 'play none none none' }
+          });
+      }
+    });
+    return () => ctx.revert();
+  }, [isLeft]);
+
+  // Premium text animations
+  useCardTextAnimation(cardRef, titleRef, descRef, techRef, ctaRef, imageRef, [isLeft]);
+
+  return (
+    <div className="projects-timeline-item"
+      style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', gap: 0, minHeight: 340 }}>
+      <div className={isLeft ? 'flex justify-end' : ''}>
+        {isLeft && (
+          <div ref={cardRef} className="projects-card group" style={{ maxWidth: 520, width: '100%' }}>
+            <CardInner project={project} imageRef={imageRef} titleRef={titleRef} descRef={descRef} techRef={techRef} ctaRef={ctaRef} onPlay={onPlay} />
+          </div>
+        )}
+      </div>
+      <div className="flex flex-col items-center relative" style={{ width: 60 }}>
+        <div ref={lineRef} className="absolute top-1/2 -translate-y-1/2"
+          style={{ width: 60, height: 1, background: 'rgba(255,255,255,0.12)', transformOrigin: isLeft ? 'right' : 'left' }} />
+        <div className="relative z-10"
+          style={{ width: 10, height: 10, borderRadius: '50%', background: '#00e5ff', boxShadow: '0 0 14px rgba(0,229,255,0.5)' }} />
+      </div>
+      <div>
+        {!isLeft && (
+          <div ref={cardRef} className="projects-card group" style={{ maxWidth: 520, width: '100%' }}>
+            <CardInner project={project} imageRef={imageRef} titleRef={titleRef} descRef={descRef} techRef={techRef} ctaRef={ctaRef} onPlay={onPlay} />
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/* ══════ TABLET TIMELINE CARD (offset layout) ══════ */
+function TabletProjectCard({ project, index, onPlay }) {
+  const cardRef = useRef(null);
+  const imageRef = useRef(null);
+  const titleRef = useRef(null);
+  const descRef = useRef(null);
+  const techRef = useRef(null);
+  const ctaRef = useRef(null);
+  const dotRef = useRef(null);
+  const isLeft = index % 2 === 0;
+
+  useEffect(() => {
+    const card = cardRef.current;
+    if (!card) return;
+    const ctx = gsap.context(() => {
+      gsap.fromTo(card,
+        { opacity: 0, x: isLeft ? -50 : 50, y: 30 },
+        {
+          opacity: 1, x: 0, y: 0, duration: 0.9, ease: 'power3.out',
+          scrollTrigger: { trigger: card, start: 'top 85%', toggleActions: 'play none none none' }
+        }
+      );
+      if (dotRef.current) {
+        gsap.fromTo(dotRef.current, { scale: 0 },
+          {
+            scale: 1, duration: 0.5, ease: 'back.out(3)',
+            scrollTrigger: { trigger: card, start: 'top 85%', toggleActions: 'play none none none' }
+          });
+      }
+    });
+    return () => ctx.revert();
+  }, [isLeft]);
+
+  useCardTextAnimation(cardRef, titleRef, descRef, techRef, ctaRef, imageRef, []);
+
+  return (
+    <div className="relative flex items-start gap-4" style={{ paddingLeft: 28 }}>
+      {/* Timeline dot */}
+      <div ref={dotRef} className="absolute left-0 top-8 z-10"
+        style={{ width: 10, height: 10, borderRadius: '50%', background: '#00e5ff', boxShadow: '0 0 14px rgba(0,229,255,0.5)' }} />
+      {/* Card */}
+      <div ref={cardRef} className="projects-card group flex-1" style={{ maxWidth: 600 }}>
+        <CardInner project={project} imageRef={imageRef} titleRef={titleRef} descRef={descRef} techRef={techRef} ctaRef={ctaRef} onPlay={onPlay} />
+      </div>
+    </div>
+  );
+}
+
+/* ══════ MOBILE CARD ══════ */
+function MobileProjectCard({ project, index, onPlay }) {
+  const cardRef = useRef(null);
+  const imageRef = useRef(null);
+  const titleRef = useRef(null);
+  const descRef = useRef(null);
+  const techRef = useRef(null);
+  const ctaRef = useRef(null);
+
+  useEffect(() => {
+    const card = cardRef.current;
+    if (!card) return;
+    const ctx = gsap.context(() => {
+      gsap.fromTo(card, { opacity: 0, y: 60 },
+        {
+          opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
+          scrollTrigger: { trigger: card, start: 'top 85%', toggleActions: 'play none none none' }
+        });
+    });
+    return () => ctx.revert();
+  }, []);
+
+  useCardTextAnimation(cardRef, titleRef, descRef, techRef, ctaRef, imageRef, []);
+
+  return (
+    <div ref={cardRef} className="projects-card group">
+      <CardInner project={project} imageRef={imageRef} titleRef={titleRef} descRef={descRef} techRef={techRef} ctaRef={ctaRef} onPlay={onPlay} />
+    </div>
+  );
+}
+
+/* ══════ MAIN PROJECTS SECTION ══════ */
+export default function Projects() {
+  const sectionRef = useRef(null);
+  const headingRef = useRef(null);
+  const subRef = useRef(null);
+  const timelineTrackRef = useRef(null);
+  const tabletTrackRef = useRef(null);
+  const [activeProject, setActiveProject] = useState(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Section heading — word-by-word
+      if (headingRef.current) {
+        const headingWords = headingRef.current.querySelectorAll('.split-word');
+        gsap.fromTo(headingWords,
+          { y: '120%', opacity: 0, rotateX: 50 },
+          {
+            y: '0%', opacity: 1, rotateX: 0, duration: 1, stagger: 0.06, ease: 'power4.out',
+            scrollTrigger: { trigger: sectionRef.current, start: 'top 80%', toggleActions: 'play none none none' }
+          }
+        );
+      }
+
+      // Badge
+      const badge = sectionRef.current?.querySelector('.projects-badge');
+      if (badge) {
+        gsap.fromTo(badge, { y: 20, opacity: 0, scale: 0.9 },
+          {
+            y: 0, opacity: 1, scale: 1, duration: 0.8, ease: 'power3.out',
+            scrollTrigger: { trigger: sectionRef.current, start: 'top 82%', toggleActions: 'play none none none' }
+          });
+      }
+
+      // Subtitle — clipPath reveal
+      if (subRef.current) {
+        gsap.fromTo(subRef.current,
+          { opacity: 0, y: 20, clipPath: 'inset(100% 0 0 0)' },
+          {
+            opacity: 1, y: 0, clipPath: 'inset(0% 0 0 0)', duration: 0.9, delay: 0.4, ease: 'power3.out',
+            scrollTrigger: { trigger: sectionRef.current, start: 'top 80%', toggleActions: 'play none none none' }
+          });
+      }
+
+      // Desktop timeline track
+      if (timelineTrackRef.current) {
+        gsap.fromTo(timelineTrackRef.current, { scaleY: 0 },
+          {
+            scaleY: 1, ease: 'none',
+            scrollTrigger: { trigger: sectionRef.current, start: 'top 60%', end: 'bottom 40%', scrub: 1 }
+          });
+      }
+
+      // Tablet timeline track
+      if (tabletTrackRef.current) {
+        gsap.fromTo(tabletTrackRef.current, { scaleY: 0 },
+          {
+            scaleY: 1, ease: 'none',
+            scrollTrigger: { trigger: tabletTrackRef.current.parentElement, start: 'top 60%', end: 'bottom 40%', scrub: 1 }
+          });
+      }
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <>
+      <section id="projects" ref={sectionRef} className="relative overflow-hidden"
+        style={{ paddingTop: 120, paddingBottom: 120, background: '#050505' }}>
+        {/* Ambient glow */}
+        <div className="absolute pointer-events-none"
+          style={{
+            top: '10%', left: '50%', transform: 'translateX(-50%)', width: 800, height: 800, borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(0,229,255,0.03) 0%, transparent 70%)'
+          }} />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          {/* Section Header */}
+          <div className="text-center mb-20 sm:mb-28">
+            <div>
+              <span className="projects-badge inline-block text-xs tracking-[0.3em] uppercase mb-5 px-4 py-1.5 rounded-full"
+                style={{ color: '#00e5ff', border: '1px solid rgba(0,229,255,0.15)', background: 'rgba(0,229,255,0.04)' }}>
+                Selected Work
+              </span>
+              <h2 ref={headingRef} className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight"
+                style={{ color: '#ffffff', perspective: '800px' }}>
+                <SplitWords text="Projects" />
+              </h2>
+            </div>
+            <p ref={subRef} className="mt-5 text-base sm:text-lg max-w-xl mx-auto"
+              style={{ color: 'rgba(255,255,255,0.35)' }}>
+              A curated showcase of digital products we've designed, developed, and delivered.
+            </p>
+          </div>
+
+          {/* Desktop Timeline (lg+) */}
+          <div className="hidden lg:block relative">
+            <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0" style={{ width: 1 }}>
+              <div ref={timelineTrackRef} className="w-full h-full origin-top"
+                style={{ background: 'linear-gradient(to bottom, rgba(0,229,255,0.25), rgba(124,58,237,0.15), rgba(255,255,255,0.05))' }} />
+            </div>
+            <div className="absolute left-1/2 -translate-x-1/2 -top-2"
+              style={{ width: 8, height: 8, borderRadius: '50%', background: '#00e5ff', boxShadow: '0 0 16px rgba(0,229,255,0.6)' }} />
+            <div className="flex flex-col gap-16">
+              {projects.map((project, i) => (
+                <ProjectCard key={project.title} project={project} index={i} onPlay={setActiveProject} />
+              ))}
+            </div>
+            <div className="absolute left-1/2 -translate-x-1/2 -bottom-2"
+              style={{ width: 8, height: 8, borderRadius: '50%', background: 'rgba(255,255,255,0.2)', boxShadow: '0 0 10px rgba(255,255,255,0.1)' }} />
+          </div>
+
+          {/* Tablet Layout (md only) — left-aligned timeline */}
+          <div className="hidden md:block lg:hidden relative">
+            <div className="absolute left-[4px] top-0 bottom-0" style={{ width: 1 }}>
+              <div ref={tabletTrackRef} className="w-full h-full origin-top"
+                style={{ background: 'linear-gradient(to bottom, rgba(0,229,255,0.25), rgba(124,58,237,0.15), rgba(255,255,255,0.05))' }} />
+            </div>
+            <div className="flex flex-col gap-12">
+              {projects.map((project, i) => (
+                <TabletProjectCard key={project.title} project={project} index={i} onPlay={setActiveProject} />
+              ))}
+            </div>
+          </div>
+
+          {/* Mobile Layout (below md) */}
+          <div className="md:hidden flex flex-col gap-10">
+            {projects.map((project, i) => (
+              <MobileProjectCard key={project.title} project={project} index={i} onPlay={setActiveProject} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {activeProject && <VideoModal project={activeProject} onClose={() => setActiveProject(null)} />}
+    </>
+  );
+}
+</file>
+
+<file path="src/components/Footer.jsx">
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const Footer = () => {
+  const footerRef = useRef(null);
+  const circleRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+     
+      // Magnetic Circle Interaction
+      const handleMouseMove = (e) => {
+        const { clientX, clientY } = e;
+        const rect = circleRef.current.getBoundingClientRect();
+        const x = clientX - (rect.left + rect.width / 2);
+        const y = clientY - (rect.top + rect.height / 2);
+
+        gsap.to(circleRef.current, {
+          x: x * 0.3,
+          y: y * 0.3,
+          duration: 0.5,
+          ease: "power2.out",
+        });
+      };
+
+      const handleMouseLeave = () => {
+        gsap.to(circleRef.current, {
+          x: 0,
+          y: 0,
+          duration: 0.5,
+          ease: "elastic.out(1, 0.3)",
+        });
+      };
+
+      const circleArea = circleRef.current;
+      circleArea.addEventListener("mousemove", handleMouseMove);
+      circleArea.addEventListener("mouseleave", handleMouseLeave);
+
+      return () => {
+        circleArea.removeEventListener("mousemove", handleMouseMove);
+        circleArea.removeEventListener("mouseleave", handleMouseLeave);
+      };
+    }, footerRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <footer
+      ref={footerRef}
+      className="relative w-full z-10 bg-[#080808] text-white overflow-hidden pt-32 pb-12"
+    >
+     
+      <div className="max-w-400 mx-auto px-[5vw]">
+        {/* Main Section */}
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-32 relative">
+          <div className="max-w-4xl">
+            <h2 className="text-[10vw] lg:text-[8.5vw] font-extrabold brightness-200 leading-[0.85] tracking-tighter mb-8 overflow-hidden">
+              <span className=" inline-block">HAVE A</span> <br />
+              <span className=" inline-block gradient-text italic">
+                PROJECT?
+              </span>
+            </h2>
+            <p className="text-xl text-gray-40  max-w-md font-light leading-relaxed reveal-text">
+              Transforming complex ideas into seamless digital realities. Codexa
+              is where innovation meets execution.
+            </p>
+          </div>
+
+          <div className="mt-16 lg:mt-0 flex justify-center items-center w-full lg:w-auto">
+            <div
+              ref={circleRef}
+              className="w-48 h-48 md:w-64 md:h-64 rounded-full border border-white/20 flex items-center justify-center cursor-pointer relative group overflow-hidden transition-colors duration-500 hover:border-blue-500"
+            >
+              <a href="#contact">
+                <div className="absolute inset-0 scale-0 group-hover:scale-100 transition-transform duration-700 rounded-full origin-center"></div>
+                <span className="relative z-10 text-lg uppercase tracking-widest font-bold group-hover:text-[gradient-text] transition-colors duration-300">
+                  Contact Us
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+          <div className="text-[10px] tracking-[0.4em] uppercase text-white/30">
+            © 2026 Codexa Creative Studio • All Rights Reserved
+          </div>
+          <div className="flex gap-10">
+            {["X", "LinkedIn", "Github", "Dribbble"].map((social) => (
+              <a
+                key={social}
+                className="text-xs font-bold tracking-widest hover:text-blue-500 transition-colors relative group"
+              >
+                {social}
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-blue-500 group-hover:w-full transition-all duration-300"></span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Background Decorative Element */}
+      <div className="absolute -bottom-1/2 -left-1/4 w-200 h-200 bg-blue-600/5 rounded-full blur-[120px] pointer-events-none"></div>
+    </footer>
+  );
+};
+
+export default Footer;
+</file>
+
+<file path="src/components/Services.jsx">
+import { Swiper, SwiperSlide } from "swiper/react";
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger"; 
+import "swiper/css";
+
+// 2. Register Plugin
+gsap.registerPlugin(ScrollTrigger);
+
+export default function Services() {
+  const sectionRef = useRef(null);
+
+  const services = [
+    { title: "Web Design", description: "Crafting visually stunning, user-centric designs that turn visitors into loyal customers.", icon: "🎨" },
+    { title: "Custom Dev", description: "High-performance applications built with MERN stack and smooth GSAP animations.", icon: "⚙️" },
+    { title: "Brand Identity", description: "Unique brand strategies that resonate with your audience and stand out.", icon: "🎯" },
+    { title: "SEO Growth", description: "Data-driven SEO strategies to ensure maximum visibility and organic growth.", icon: "🔍" },
+  ];
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".service-title", {
+        y: 100,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power4.out",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 60%", 
+          toggleActions: "play none none reverse", 
+        }
+      });
+
+      
+      gsap.from(".swiper-container-wrapper", {
+        x: 200,
+        opacity: 0,
+        duration: 1.5,
+        ease: "expo.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 40%",
+        }
+      });
+    }, sectionRef);
+
+    return () => ctx.revert(); 
+  }, []);
+
+  const onSlideChange = (swiper) => {
+    const activeSlide = swiper.slides[swiper.activeIndex];
+    const elements = activeSlide.querySelectorAll(".animate-me");
+
+    gsap.fromTo(elements, 
+      { y: 40, opacity: 0, scale: 0.8 }, 
+      { y: 0, opacity: 1, scale: 1, duration: 0.8, stagger: 0.1, ease: "back.out(1.7)" }
+    );
+  };
+
+  return (
+    <section ref={sectionRef} className="py-24  overflow-hidden min-h-screen flex flex-col justify-center">
+      <div className="text-center mb-16 px-4">
+        <h2 className="service-title text-5xl md:text-8xl font-black text-white mb-4 tracking-tighter">
+          OUR <span className="text-transparent bg-clip-text bg-linear-to-r from-[#3B82F6] to-[#7C3AED]">SERVICES</span>
+        </h2>
+        <p className="service-title text-slate-500 text-lg md:text-xl font-medium">
+          Innovation meets execution. Swipe to see more.
+        </p>
+      </div>
+
+      <div className="swiper-container-wrapper w-full px-4">
+        <Swiper
+          spaceBetween={40}
+          slidesPerView={1.2}
+          centeredSlides={true}
+          speed={1000}
+          onSlideChange={onSlideChange}
+          breakpoints={{
+            1024: { slidesPerView: 2.5 }
+          }}
+          className="w-full cursor-grab active:cursor-grabbing"
+        >
+          {services.map((service, index) => (
+            <SwiperSlide key={index}>
+              <div className="relative group flex flex-col justify-center items-center h-[55vh] px-8 md:px-14 rounded-[2.5rem] 
+                            border-l border-r border-white/5 backdrop-blur-3xl bg-white/[0.02] 
+                            transition-all duration-700 hover:bg-white/[0.05] hover:border-white/20">
+                
+                {/* Background Glow for Depth */}
+                <div className="absolute -z-10 w-60 h-60 bg-blue-600/10 blur-[120px] rounded-full group-hover:bg-purple-600/20 transition-all duration-700" />
+
+                <div className="animate-me text-8xl mb-8 filter drop-shadow-lg group-hover:scale-110 transition-transform duration-500">
+                  {service.icon}
+                </div>
+                
+                <h3 className="animate-me text-3xl md:text-4xl font-bold text-white mb-5 tracking-tight">
+                  {service.title}
+                </h3>
+                
+                <p className="animate-me text-slate-400 text-center text-lg leading-relaxed max-w-md opacity-80 group-hover:opacity-100 transition-opacity">
+                  {service.description}
+                </p>
+
+                <div className="animate-me w-24 h-1 bg-linear-to-r from-[#3B82F6] to-[#7C3AED] mt-12 rounded-full shadow-[0_0_20px_rgba(59,130,246,0.4)]" />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </section>
+  );
+}
+</file>
+
+<file path="src/components/Navbar.jsx">
+const NAV_LINKS = [
+  { name: "Home", href: "#hero" },
+  { name: "Services", href: "#services" },
+  { name: "Projects", href: "#projects" },
+  { name: "Why Us", href: "#why-us" },
+  { name: "About", href: "#about" },
+];
+
+export default function Navbar() {
+
+
+  return (
+    <nav className="navbar z-40 h-[10vh]  ">
+      <div className="container">
+        <div className="nav-wrapper">
+          <a href="#hero" className="logo select-none">
+            <span className="font-bold">C</span>odexa
+          </a>
+
+          <ul className="nav-links">
+            {NAV_LINKS.map(({ name, href }) => (
+              <li key={name}>
+                <a href={href}>
+                  {name}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <div className="nav-actions">
+            <a href="#contact">
+              <button className="btn-outline">Let's Talk</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+}
+</file>
+
+<file path="src/components/Hero.jsx">
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import Aurora from "./ui/Aurora";
+
+export default function Hero() {
+  const containerRef = useRef(null);
+  const headingRef = useRef(null);
+  const subRef = useRef(null);
+  const btnRef = useRef(null);
+  const splineRef = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+
+    // Initial load animations
+    tl.fromTo(
+      ".reveal-text",
+      { y: 80, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1.2, stagger: 0.2 },
+    )
+      .fromTo(
+        btnRef.current,
+        { scale: 0.9, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 0.8 },
+        "-=0.6",
+      )
+      .fromTo(
+        splineRef.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 2 },
+        "-=1",
+      );
+  }, []);
+
+  return (
+    <section
+      id="hero"
+      ref={containerRef}
+     
+      className=" relative h-[90vh] mt-[10vh] flex items-center justify-center overflow-hidden bg-transparent "
+    >
+      {/* Spline Model - Integrated as Background element */}
+      <div
+        ref={splineRef}
+        className="absolute inset-0 w-screen h-full opacity-40 pointer-events-none scale-125 md:scale-100"
+      >
+        <iframe
+          src="https://my.spline.design/circularsolarcopycopy-6eFpQwrEvBeFbEphs3DHhUAL-r0s/"
+          className="w-full h-full border-none"
+        ></iframe>
+      </div>
+
+      {/* Content Layer */}
+      <div className=" relative text-center px-6 h-[80vh] mt-[23vh]  ">
+        <div className="max-w-5xl mx-auto flex flex-col items-center gap-8">
+          <div className="overflow-hidden">
+            <h1
+              ref={headingRef}
+              className="reveal-text text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] text-white"
+            >
+              WE BUILD DIGITAL <br />
+              <span className="bg-linear-to-r from-blue-500 via-cyan-400 to-purple-500 bg-clip-text text-transparent italic">
+                EXPERIENCES
+              </span>{" "}
+              <br />
+              THAT MATTER
+            </h1>
+          </div>
+
+          <div className="overflow-hidden">
+            <p
+              ref={subRef}
+              className="reveal-text text-lg sm:text-2xl text-white/60 max-w-2xl mx-auto font-light leading-relaxed"
+            >
+              Codexa is a creative engineering studio focused on building
+              high-performance web products with precision.
+            </p>
+          </div>
+
+          <div ref={btnRef} className="flex flex-col sm:flex-row gap-5 mt-4">
+            <a href="#contact" className="group relative">
+              <button className="px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-blue-600 hover:text-white transition-all duration-500 flex items-center gap-2">
+                Start Your Project
+                <span className="group-hover:translate-x-1 transition-transform">
+                  →
+                </span>
+              </button>
+            </a>
+            <a href="#why-us">
+              <button className="px-8 py-4 border border-white/20 text-white font-medium rounded-full backdrop-blur-md hover:bg-white/10 transition-all duration-300">
+                Learn More
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Decorative Gradient Overlay for UX Depth */}
+      <div className="absolute bottom-0 left-0 w-full h-[10vh] bg-black  z-10"></div>
+    </section>
+  );
+}
+</file>
+
+<file path="src/index.css">
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/inter";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(
+    180deg,
+    #000000 0%,
+    #030303 45%,
+    #080808 100%
+  );
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.container {
+  width: min(1200px, 95%);
+  margin: 0 auto;
+}
+
+/* Reusable Theme Classes */
+.glass {
+  background: rgba(17, 24, 39, 0.55);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(14px);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.accent-text {
+  color: var(--accent-primary);
+}
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    var(--accent-primary),
+    var(--accent-secondary)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.muted-text {
+  color: var(--text-secondary);
+}
+
+.glow {
+  box-shadow: var(--shadow-glow);
+}
+
+.border-soft {
+  border: 1px solid var(--border-color);
+}
+
+.rounded {
+  border-radius: var(--radius);
+}
+
+.transition {
+  transition: var(--transition);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(
+    90deg,
+    var(--accent-primary),
+    var(--accent-secondary)
+  );
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 229, 255, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: 12px 28px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  background: rgba(0, 229, 255, 0.05);
+}
+
+/* Grid System */
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(3, 7, 18, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.logo span {
+  color: var(--accent-primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--accent-primary);
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+@theme inline {
+  --font-heading: var(--font-sans);
+  --font-sans: 'Inter Variable', sans-serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+</file>
+
+<file path="src/App.jsx">
+import Aurora from "./components/ui/Aurora";
+
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import WhyUs from "./components/WhyUs";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Projects from "./components/Projects";
+
+export default function App() {
+  return (
+    <main className="relative min-h-screen bg-[#050505]">
+      <div className="fixed  inset-0 z-[0] pointer-events-none">
+        <Aurora
+          colorStops={["#3B82F6", "#7C3AED", "#06B6D4", "#A855F7"]}
+          amplitude={0.3}
+          blend={1}
+        />
+      </div>
+
+      <div className="relative mb-[100vh] ">
+        <Navbar />
+        <Hero />
+        <Services />
+        <Projects />
+        <WhyUs />
+        <About />
+        <Contact />
+      </div>
+      <div className="fixed bottom-0 right-0 w-screen z-[-1] ">
+        <Footer />
+      </div>
+    </main>
+  );
+}
+</file>
+
+</files>
