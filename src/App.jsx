@@ -8,7 +8,6 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Projects from "./components/Projects";
-<<<<<<< HEAD
 
 export default function App() {
   return (
@@ -20,13 +19,6 @@ export default function App() {
           blend={1}
         />
       </div>
-=======
-
-
-export default function App() {
-  return (
-    <main className="min-h-screen relative overflow-x-hidden bg-[#050505]">
->>>>>>> origin/Lakshay
 
       <div className="relative mb-[100vh] ">
         <Navbar />
