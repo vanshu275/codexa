@@ -84,8 +84,8 @@ export default function Services() {
           {services.map((service, index) => (
             <SwiperSlide key={index}>
               <div className="relative group flex flex-col justify-center items-center h-[55vh] px-8 md:px-14 rounded-[2.5rem] 
-                            border-l border-r border-white/5 backdrop-blur-3xl bg-white/[0.02] 
-                            transition-all duration-700 hover:bg-white/[0.05] hover:border-white/20">
+                            border-l border-r border-white/5 backdrop-blur-3xl bg-white/2 
+                            transition-all duration-700 hover:bg-white/5 hover:border-white/20">
                 
                 {/* Background Glow for Depth */}
                 <div className="absolute -z-10 w-60 h-60 bg-blue-600/10 blur-[120px] rounded-full group-hover:bg-purple-600/20 transition-all duration-700" />

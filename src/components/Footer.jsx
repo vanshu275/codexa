@@ -51,10 +51,10 @@ const Footer = () => {
   return (
     <footer
       ref={footerRef}
-      className="relative w-full z-10 bg-[#080808] text-white overflow-hidden pt-32 pb-12"
+      className="relative w-full z-10 bg-transparent text-white overflow-hidden pt-32 pb-12"
     >
      
-      <div className="max-w-400 mx-auto px-[5vw]">
+      <div className="max-w-7xl mx-auto px-[5vw]">
         {/* Main Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-32 relative">
           <div className="max-w-4xl">
@@ -64,7 +64,7 @@ const Footer = () => {
                 PROJECT?
               </span>
             </h2>
-            <p className="text-xl text-gray-40  max-w-md font-light leading-relaxed reveal-text">
+            <p className="text-xl text-gray-400 max-w-md font-light leading-relaxed reveal-text">
               Transforming complex ideas into seamless digital realities. Codexa
               is where innovation meets execution.
             </p>
@@ -105,7 +105,7 @@ const Footer = () => {
       </div>
 
       {/* Background Decorative Element */}
-      <div className="absolute -bottom-1/2 -left-1/4 w-200 h-200 bg-blue-600/5 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute -bottom-1/2 -left-1/4 w-[800px] h-[800px] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none"></div>
     </footer>
   );
 };

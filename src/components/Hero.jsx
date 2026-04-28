@@ -46,7 +46,7 @@ export default function Hero() {
       className="relative min-h-[90vh] mt-[10vh] flex items-center justify-center overflow-hidden bg-transparent"
     >
       {/* Sleek Code-Inspired Grid Background */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-size-[4rem_4rem] mask-[radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
 
       {/* Ambient Glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
@@ -71,7 +71,7 @@ export default function Hero() {
             <span className="inline-block text-white origin-bottom">CRAFTING</span>
           </div>
           <div className="hero-title-line overflow-hidden py-1">
-            <span className="inline-block bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 bg-clip-text text-transparent origin-bottom">
+            <span className="inline-block bg-linear-to-r from-blue-400 via-cyan-400 to-purple-500 bg-clip-text text-transparent origin-bottom">
               DIGITAL EXCELLENCE
             </span>
           </div>

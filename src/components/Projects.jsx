@@ -99,7 +99,7 @@ function VideoModal({ project, onClose }) {
   }, [onClose]);
 
   return (
-    <div ref={overlayRef} onClick={handleClose} className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-8"
+    <div ref={overlayRef} onClick={handleClose} className="fixed inset-0 z-9999 flex items-center justify-center p-4 sm:p-8"
       style={{ background: 'rgba(0,0,0,0.88)', backdropFilter: 'blur(12px)' }}>
       <div ref={contentRef} onClick={e => e.stopPropagation()} className="relative w-full max-w-5xl">
         <button onClick={handleClose}
@@ -135,7 +135,7 @@ function CardInner({ project, imageRef, titleRef, descRef, techRef, ctaRef, onPl
       {/* Thumbnail */}
       <div ref={imageRef} className="relative overflow-hidden cursor-pointer" onClick={() => onPlay(project)}>
         <img src={project.thumbnail} alt={project.title}
-          className="w-full aspect-[16/10] object-cover transition-transform duration-700 group-hover:scale-105" />
+          className="w-full aspect-16/10 object-cover transition-transform duration-700 group-hover:scale-105" />
         <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/40 transition-all duration-500">
           <div className="w-14 h-14 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 scale-75 group-hover:scale-100"
             style={{ background: 'rgba(0,229,255,0.15)', border: '1px solid rgba(0,229,255,0.4)', backdropFilter: 'blur(8px)' }}>

@@ -74,7 +74,7 @@ export default function Contact() {
           style={{ background: 'rgba(10, 10, 10, 0.6)', backdropFilter: 'blur(20px)' }}
         >
           {/* Top gradient for depth */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent h-1/3 opacity-20 pointer-events-none" />
+          <div className="absolute inset-0 bg-linear-to-b from-white/5 to-transparent h-1/3 opacity-20 pointer-events-none" />
 
           {/* Hidden fields for Netlify forms */}
           <input type="hidden" name="form-name" value="contact" />
@@ -153,7 +153,7 @@ export default function Contact() {
             className="w-full px-8 py-4 mt-4 bg-transparent border border-[#00e5ff]/30 text-[#00e5ff] hover:bg-[#00e5ff]/10 hover:border-[#00e5ff] rounded-xl font-medium transition-all duration-300 text-lg relative overflow-hidden group z-10"
           >
             <span className="relative z-10">Send Message</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/10 to-cyan-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+            <div className="absolute inset-0 bg-linear-to-r from-cyan-500/0 via-cyan-500/10 to-cyan-500/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
           </button>
 
         </form>
@@ -161,7 +161,7 @@ export default function Contact() {
 
       {/* Toast Notification */}
       <div 
-        className={`fixed bottom-8 left-1/2 -translate-x-1/2 z-[100] transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
+        className={`fixed bottom-8 left-1/2 -translate-x-1/2 z-100 transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
           submitted ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95 pointer-events-none'
         }`}
       >

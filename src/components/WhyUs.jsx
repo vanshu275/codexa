@@ -102,7 +102,7 @@ export default function WhyUs() {
               className="group relative p-10 h-[350px] flex flex-col justify-end rounded-3xl bg-[#0a0a0a] border border-white/5 hover:border-blue-600/50 transition-all duration-700 overflow-hidden"
             >
               {/* Animated Background Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute inset-0 bg-linear-to-t from-blue-600/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
               <div className="relative z-10">
                 <div className="text-[120px] font-black absolute -top-16 -left-4 text-white/5 group-hover:text-blue-600/10 transition-colors duration-700">

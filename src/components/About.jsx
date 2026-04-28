@@ -187,7 +187,7 @@ export default function About() {
                     style={{ background: `radial-gradient(circle at center, ${member.hoverGlow} 0%, transparent 80%)` }} />
 
                   {/* Top gradient for depth */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent h-1/3 opacity-20" />
+                  <div className="absolute inset-0 bg-linear-to-b from-white/5 to-transparent h-1/3 opacity-20" />
 
                   {/* Team Member Image */}
                   <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[85%] flex items-end justify-center pointer-events-none">
@@ -200,7 +200,7 @@ export default function About() {
                   </div>
 
                   {/* Bottom Text Content Area */}
-                  <div className="relative z-10 p-6 sm:p-8 w-full transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 bg-gradient-to-t from-[#050505] via-[#050505]/90 to-transparent pt-24">
+                  <div className="relative z-10 p-6 sm:p-8 w-full transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 bg-linear-to-t from-[#050505] via-[#050505]/90 to-transparent pt-24">
                     <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
                       <div className="whitespace-nowrap transition-all duration-500">
                         <h4 className="text-2xl font-bold text-white mb-1 tracking-tight">

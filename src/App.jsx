@@ -12,7 +12,7 @@ import Projects from "./components/Projects";
 export default function App() {
   return (
     <main className="relative min-h-screen bg-[#050505]">
-      <div className="fixed  inset-0 z-[0] pointer-events-none">
+      <div className="fixed inset-0 z-0 pointer-events-none">
         <Aurora
           colorStops={["#3B82F6", "#7C3AED", "#06B6D4", "#A855F7"]}
           amplitude={0.3}
@@ -20,7 +20,7 @@ export default function App() {
         />
       </div>
 
-      <div className="relative mb-[100vh] ">
+      <div className="relative z-10 ">
         <Navbar />
         <Hero />
         <Services />
@@ -29,7 +29,7 @@ export default function App() {
         <About />
         <Contact />
       </div>
-      <div className="fixed bottom-0 right-0 w-screen z-[-1] ">
+      <div className="relative w-screen">
         <Footer />
       </div>
     </main>
