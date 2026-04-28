@@ -100,9 +100,6 @@ export default function Hero() {
           </a>
         </div>
       </div>
-
-      {/* Bottom Fade out matching your existing theme */}
-      <div className="absolute bottom-0 left-0 w-full h-[10vh] bg-gradient-to-t from-[#050505] to-transparent z-10" />
     </section>
   );
 }
