@@ -22,7 +22,7 @@ export default function Services() {
       gsap.from(".service-title", {
         y: 100,
         opacity: 0,
-        duration: 1.2,
+        duration: .4,
         ease: "power4.out",
         stagger: 0.2,
         scrollTrigger: {
@@ -36,7 +36,7 @@ export default function Services() {
       gsap.from(".swiper-container-wrapper", {
         x: 200,
         opacity: 0,
-        duration: 1.5,
+        duration: .8,
         ease: "expo.out",
         scrollTrigger: {
           trigger: sectionRef.current,

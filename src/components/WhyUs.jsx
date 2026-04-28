@@ -44,8 +44,8 @@ export default function WhyUs() {
         y: 120,
         skewY: 16,
         opacity: 0,
-        duration: 1.8, 
-        stagger: 0.7,
+        duration: .7, 
+        stagger: 0.4,
         ease: "power4.out",
         scrollTrigger: {
           trigger: titleRef.current,
@@ -57,7 +57,7 @@ export default function WhyUs() {
         y: 100,
         skewY :23 ,
         opacity: 0,
-        duration: 1.2,
+        duration: .9,
         stagger: 0.2, 
         ease: "power3.out",
         scrollTrigger: {

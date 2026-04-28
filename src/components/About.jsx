@@ -35,7 +35,7 @@ export default function About() {
 
   return (
     <section id='about' ref={containerRef} className="py-20 px-4  items-center text-center">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[95%] mx-auto">
         <div
           ref={contentRef}
           className="max-w-3xl mb-16  m-auto"
