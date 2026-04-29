@@ -12,6 +12,7 @@ import Projects from "./components/Projects";
 export default function App() {
   return (
     <main className="relative min-h-screen bg-[#050505]">
+      <Navbar />
       <div className="fixed inset-0 z-0 pointer-events-none">
         <Aurora
           colorStops={["#3B82F6", "#7C3AED", "#06B6D4", "#A855F7"]}
@@ -21,7 +22,6 @@ export default function App() {
       </div>
 
       <div className="relative z-10 ">
-        <Navbar />
         <Hero />
         <Services />
         <Projects />

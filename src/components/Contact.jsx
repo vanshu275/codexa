@@ -27,7 +27,7 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (formData.name && formData.email && formData.message) {
+    if (formData.name && formData.email && formData.subject && formData.message) {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
