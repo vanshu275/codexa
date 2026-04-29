@@ -65,7 +65,7 @@ const Footer = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-400 max-w-md font-light leading-relaxed reveal-text">
-              Transforming complex ideas into seamless digital realities. Codexa
+              Transforming complex ideas into seamless digital realities. PortionDev
               is where innovation meets execution.
             </p>
           </div>
@@ -88,7 +88,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-[10px] tracking-[0.4em] uppercase text-white/30">
-            © 2026 Codexa Creative Studio • All Rights Reserved
+            © 2026 PortionDev Creative Studio • All Rights Reserved
           </div>
           <div className="flex gap-10">
             {["X", "LinkedIn", "Github", "Dribbble"].map((social) => (

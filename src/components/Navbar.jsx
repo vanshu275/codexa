@@ -27,7 +27,8 @@ export default function Navbar() {
         <div className="container h-full">
           <div className="nav-wrapper h-full flex items-center justify-between">
             <a href="#hero" className="logo select-none z-50 relative">
-              <span className="font-bold text-cyan-400">C</span>odexa
+              <span className="font-bold text-cyan-400">P</span>ortion
+              <span className="font-bold text-cyan-400">D</span>ev
             </a>
 
             {/* Desktop Navigation */}
