@@ -68,8 +68,9 @@ export default function Contact() {
           ref={formRef}
           onSubmit={handleSubmit}
           name="contact"
+          method="POST"
           data-netlify="true"
-          netlify-honeypot="bot-field"
+          data-netlify-honeypot="bot-field"
           className="space-y-6 p-8 sm:p-10 rounded-3xl border border-white/5 relative overflow-hidden shadow-2xl"
           style={{ background: 'rgba(10, 10, 10, 0.6)', backdropFilter: 'blur(20px)' }}
         >
