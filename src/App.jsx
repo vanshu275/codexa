@@ -29,7 +29,7 @@ export default function App() {
         <About />
         <Contact />
       </div>
-      <div className="fixed bottom-0 z-[-1] w-screen">
+      <div className="fixed bottom-0 z-0 w-screen">
         <Footer />
       </div>
     </main>
