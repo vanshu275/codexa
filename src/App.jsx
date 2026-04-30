@@ -13,7 +13,7 @@ export default function App() {
   return (
     <main className="relative min-h-screen bg-[#050505]">
       <Navbar />
-      <div className="fixed inset-0 z-[-2] pointer-events-none">
+      <div className="fixed inset-0 z-[0] pointer-events-none">
         <Aurora
           colorStops={["#3B82F6", "#7C3AED", "#06B6D4", "#A855F7"]}
           amplitude={0.3}

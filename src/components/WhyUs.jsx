@@ -72,6 +72,7 @@ export default function WhyUs() {
 
   return (
     <section
+    id="why-us"
       ref={containerRef}
       className="py-16 md:py-24 px-4 md:px-6 text-white overflow-hidden"
     >

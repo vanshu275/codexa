@@ -51,7 +51,7 @@ export default function Services() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 overflow-hidden min-h-screen flex flex-col justify-center relative">
+    <section id="services" ref={sectionRef} className="py-24 overflow-hidden min-h-screen flex flex-col justify-center relative">
       {/* Background Ambience */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-900/10 rounded-full blur-[150px] pointer-events-none" />
 
