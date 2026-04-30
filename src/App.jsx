@@ -21,7 +21,7 @@ export default function App() {
         />
       </div>
 
-      <div className="relative z-10 ">
+      <div className="relative z-10 mb-[90vh]">
         <Hero />
         <Services />
         <Projects />
@@ -29,7 +29,7 @@ export default function App() {
         <About />
         <Contact />
       </div>
-      <div className="relative w-screen">
+      <div className="fixed bottom-0 z-[-1] w-screen">
         <Footer />
       </div>
     </main>

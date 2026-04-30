@@ -10,7 +10,6 @@ const Footer = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-     
       // Magnetic Circle Interaction
       const handleMouseMove = (e) => {
         const { clientX, clientY } = e;
@@ -51,33 +50,35 @@ const Footer = () => {
   return (
     <footer
       ref={footerRef}
-      className="relative w-full z-10 bg-transparent text-white overflow-hidden pt-32 pb-12"
+      className="relative w-full z-10 bg-transparent h-[90vh] text-white overflow-hidden pt-10 pb-10"
     >
-     
-      <div className="max-w-7xl mx-auto px-[5vw]">
+      {/* 
+          1. h-full: Takki container footer ki 90vh height le sake.
+          2. flex flex-col justify-between: Isse top aur bottom section ke beech gap maintain hoga.
+      */}
+      <div className="max-w-7xl mx-auto px-[5vw] h-full flex flex-col justify-between">
         {/* Main Section */}
-        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end mb-32 relative text-center lg:text-left">
-          <div className="max-w-4xl flex flex-col items-center lg:items-start">
-            <h2 className="text-[12vw] md:text-[10vw] lg:text-[8.5vw] font-extrabold brightness-200 leading-[0.85] tracking-tighter mb-8 overflow-hidden">
-              <span className=" inline-block">HAVE A</span> <br />
-              <span className=" inline-block gradient-text italic">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-end text-center md:text-left pt-10">
+          <div className="max-w-4xl flex flex-col items-center md:items-start">
+            <h2 className="text-[12vw] md:text-[10vw] lg:text-[8.5vw] font-extrabold brightness-200 leading-[0.85] tracking-tighter mb-5 overflow-hidden">
+              <span className="inline-block">HAVE A</span> <br />
+              <span className="inline-block gradient-text italic">
                 PROJECT?
               </span>
             </h2>
             <p className="text-base md:text-xl text-gray-400 max-w-md font-light leading-relaxed reveal-text">
-              Transforming complex ideas into seamless digital realities. PortionDev
-              is where innovation meets execution.
+              Transforming complex ideas into seamless digital realities.
+              PortionDev is where innovation meets execution.
             </p>
           </div>
 
-          <div className="mt-16 lg:mt-0 flex justify-center items-center w-full lg:w-auto">
+          <div className="mt-10 md:mt-0 flex justify-center items-center">
             <div
               ref={circleRef}
               className="w-48 h-48 md:w-64 md:h-64 rounded-full border border-white/20 flex items-center justify-center cursor-pointer relative group overflow-hidden transition-colors duration-500 hover:border-blue-500"
             >
-              <a href="#contact">
-                <div className="absolute inset-0 scale-0 group-hover:scale-100 transition-transform duration-700 rounded-full origin-center"></div>
-                <span className="relative z-10 text-lg uppercase tracking-widest font-bold group-hover:text-blue-400 transition-colors duration-300">
+              <a href="#contact" className="z-10">
+                <span className="text-lg uppercase tracking-widest font-bold group-hover:text-blue-400 transition-colors duration-300">
                   Contact Us
                 </span>
               </a>
@@ -85,15 +86,17 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+        {/* Bottom Bar - Ab ye automatically bottom par stick ho jayega */}
+        <div className="pb-10 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-[10px] tracking-[0.2em] md:tracking-[0.4em] uppercase text-white/30 text-center leading-relaxed">
-            © 2026 PortionDev Creative Studio<br className="block md:hidden" /> • All Rights Reserved
+            © 2026 PortionDev Creative Studio
+            <br className="block md:hidden" /> • All Rights Reserved
           </div>
           <div className="flex flex-wrap justify-center gap-6 md:gap-10">
             {["X", "LinkedIn", "Github", "Dribbble"].map((social) => (
               <a
                 key={social}
+                href="#"
                 className="text-xs font-bold tracking-widest hover:text-blue-500 transition-colors relative group"
               >
                 {social}
